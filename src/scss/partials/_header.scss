@@ -1,0 +1,15 @@
+/**********************************
+    HEADER STYLE                  *
+**********************************/
+.Header {
+    width: 100vw;
+    height: 100px;
+    position: relative;
+    background: #000;
+    img {
+        height: 50px;
+        position: absolute;
+        left: 250px;
+        bottom: 10px;
+    }
+}
