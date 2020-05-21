@@ -3,7 +3,7 @@ $database = [
     [
         'cover' => 'dist/img/hendrix.jpg',
         'album' => 'Axis: Bold As Love',
-        'author' => 'The Jimi Hendrix Experience',
+        'author' => 'Jimi Hendrix',
         'year' => '1967'
     ],
     [

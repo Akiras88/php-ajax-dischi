@@ -10,10 +10,26 @@
     <header class="Header">
         <img src="dist/img/spotify-logo.png" alt="">
     </header>
+    <select name="author" id="author">
+            <option value="all">All</option>
+            <option value="Bob">Bob Dylan</option>
+            <option value="David">David Bowie</option>
+            <option value="Grace">Grace Jones</option>
+            <option value="Jimi">Jimi Hendrix</option>
+            <option value="King">King Crimoson</option>
+            <option value="Miles">Miles Davis</option>
+            <option value="Pink">Pink Floyd</option>
+            <option value="Santana">Santana</option>
+            <option value="Springsteen">Springsteen</option>
+            <option value="Beatles">The Beatles</option>
+            <option value="Rolling">The Rolling Stone</option>
+            <option value="Velvet">The Velvet</option>
+    </select>
+    <!-- Main -->
     <main class='Main'></main>
     <!-- Handlebars template -->
     <script id="album-template" type="text/x-handlebars-template">
-        <div class="cd">
+        <div class="cd {{singer}}">
             <img src="{{img}}" alt="">
             <h3>{{title}}</h3> 
             <span class="grey">{{author}}</span>

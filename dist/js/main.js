@@ -15,7 +15,9 @@ $(document).ready(function () {
   var source = $('#album-template').html();
   var template = Handlebars.compile(source); // call function
 
-  database(myHost, main, template);
+  database(myHost, main, template); // function to select author
+
+  selectAuthor();
 }); // end document ready
 
 /***********************
@@ -42,13 +44,27 @@ function printTemplate(res, main, template) {
       img: data.cover,
       title: data.album,
       author: data.author,
-      year: data.year
+      year: data.year,
+      singer: data.author.toLowerCase()
     }; //output
 
     var output = template(context); // items
 
     main.append(output);
   }
+}
+
+function selectAuthor() {
+  $('#author').change(function () {
+    var author = $(this).val().toLowerCase();
+
+    if (author === 'all') {
+      $('.cd').show();
+    } else {
+      $('.cd').hide();
+      $('.cd.' + author).show();
+    }
+  });
 }
 })();
 
